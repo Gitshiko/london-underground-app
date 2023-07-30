@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  /* font-family: "Roboto"; */
   /* overflow-x: hidden; */
 }
 
@@ -77,7 +78,7 @@ body {
   /* border: 1px solid; */
   padding: 0.5rem;
   margin: 0 auto;
-  color: rgba(3, 3, 97, 0.98);
+  color: rgba(3, 3, 97, 0.98);  
 }
 
 .destinationA, .destinationB{
@@ -98,6 +99,7 @@ body {
   /* border: 2px solid pink; */  
   background-color: rgba(3, 3, 97, 0.98); 
   color: white;  
+  /* border-radius: 10px; */
 }
 
 
@@ -147,6 +149,7 @@ body {
 .submitButton button {
   width: 4rem;
   background-color: rgba(146, 7, 7, .9);
+  /* background-color: rgba(3, 3, 97, 0.98);  */
   color: white;
   padding: 0.5rem;
   margin-top: 2.75rem;
@@ -166,14 +169,13 @@ body {
 .modalContent {
   z-index: 2;
   padding: 0.5rem;
-  /* border: 1px solid; */
+  /* border: 3px solid rgba(3, 3, 97, 0.98); */
+  border-radius: 15px;
   width: 90%;
   position: absolute;
   top: 10rem;
   left: 4rem;
-  background-color: rgba(146, 7, 7, .9);
-  color: white;
-  /* margin-bottom: 1rem; */
+  background-color:rgba(146, 7, 7, .9); 
 }
 
 #modal {
@@ -181,29 +183,124 @@ body {
   margin: 0 auto;
   text-align: center;
   font-size: x-large;
+  /* color: rgba(3, 3, 97, 0.98); */
+  color: white;
 }
 
-.list, .transit, .dRouteList{
+.list {
   font-size: 20px;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-style: italic;
   text-align: center;
-  color: rgba(3, 3, 97, 0.98);
-  padding: 0.5rem;
-}
-
-.dRouteList{
-  text-align: left;
+  /* color: rgba(3, 3, 97, 0.98); */
+  /* color: black; */
+  padding-bottom: 1rem; 
 }
 
 .transit {
+  font-size: 20px;
+  /* font-weight: bold; */
+  font-style: italic;
+  text-align: center;
+  color: rgba(3, 3, 97, 0.98);
+  padding: 1rem;
+  border-radius: 15px;
+  /* border: 2px solid red; */
+  background-color: white;
   text-align: center;
 }
+
+.dRouteList{ 
+  text-align: left;
+  font-size: 20px;  
+  font-weight: bold;
+  font-style: italic;  
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+.Hammersmith { color: rgb(213, 163, 219);}
+.Circle { color: yellow;}
+.District { color: darkgreen;}
+.Piccadilly { color: blue;}
+.Metropolitan { color: indigo;}
+.Northern { color: black;}
+.Bakerloo { color: rgb(89, 54, 54);}
+.Jubilee { color: rgb(124, 146, 193);}
+.Central { color: red;}
+.Waterloo { color: lightblue;}
+.Victoria { color: rgb(67, 161, 228);}
+.Elizabeth { color: rgb(85, 82, 232);}
 
 .drAvailability {
   width: 100%;
   margin: 0 auto;
   padding: 0.5rem;
+}
+
+.figure {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 1rem;
+  /* border: 2px solid green; */
+}
+
+.figureTransit {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  /* border: 2px solid green; */
+  margin: 0 auto;
+}
+
+#destAFigure, #destBFigure, #destTFigure{
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  text-align: center;
+}
+
+#lineFigure {
+  height:3px; 
+  flex-grow: 1;  
+}
+
+.pink{ background: rgb(213, 163, 219);}
+.yellow { background: yellow;}
+.green { background: darkgreen;}
+.blue { background: blue;}
+.indigo { background: indigo;}
+.black { background: black;}
+.brown { background: rgb(89, 54, 54);}
+.grey{ background: rgb(124, 146, 193);}
+.red { background: red;}
+.lightblue{ background: lightblue;}
+.skyblue{ background:rgb(67, 161, 228);}
+.purple{ background: rgb(85, 82, 232);}
+
+.time {
+  font-size: 20px;
+  float: right;
+  border-radius: 10px;
+  background-color: rgba(3, 3, 97, 0.98);
+  /* background-color: white; */
+  /* color: rgba(3, 3, 97, 0.98); */
+  padding: 1rem;
+  
+}
+
+.cost {
+  font-size: 20px;
+  float: left;
+  border-radius: 10px;
+  background-color: rgba(3, 3, 97, 0.98);
+  padding: 1rem;
+  
 }
 
 @media only screen and (max-width:480px) {
@@ -230,6 +327,14 @@ body {
 
   .mainContent {
     padding-bottom: 0.5rem;
+  }
+
+  .cost, .time {
+    float:none;
+  }
+
+  .figureTransit {
+    width: 100%;
   }
   
 }

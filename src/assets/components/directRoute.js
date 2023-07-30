@@ -4,6 +4,7 @@ import {data} from '../data/london-ug-data';
 import TRoutes from './transitRoutes';
 import DirectJourneyCost from './directCost';
 import DirectJourneyTime from './directTime';
+import FigureDirect from './directFigure';
 
 
 
@@ -50,9 +51,16 @@ function CheckRoutes(props){
 
     const list = intersection.map((item, index) => { 
         return (
-          <div key={index} className= 'dRouteList'>{index+ 1}. '{item}' line</div>
+            <>
+            <div className="dRouteList">
+                <div key={index} className= {item}>{index+ 1}. '{item}' line</div>
+                <FigureDirect line = {item}/>                
+            </div>
+            </>          
         )
     })
+//color is added as a class (which is equal to its name) to line 
+    
            
 
     return(

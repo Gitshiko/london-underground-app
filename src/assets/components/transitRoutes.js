@@ -3,6 +3,7 @@
 //import {data} from '../data/codeshack-output';
 import {data} from '../data/london-ug-data';
 import TransitJourneyCost from './transitCost';
+import FigureTransit from './transitFigure';
 import TransitJourneyTime from './transitTime';
 
 function TRoutes(props) {
@@ -110,16 +111,30 @@ function TRoutes(props) {
                     :
                     <>
                         <div className='transit-list'>             
-                            <div className= 'list'>'{firstLeg[0]}' line  --> Transit via '{transitPoints[0]}' --> '{secondLeg[0]}' line</div>
-                        </div>                        
+                            <div className= 'list'><span className = {firstLeg[0]}><b>'{firstLeg[0]}' line  --></b></span> Transit via <b>'{transitPoints[0]}'</b><span className={secondLeg[0]}><b>--> '{secondLeg[0]}' line </b></span></div>
+                        </div> 
+                        <FigureTransit firstLine = {firstLeg[0]} secondLine = {secondLeg[0]}/>                       
                     </>
-                }                 
-            </div>  
-            <TransitJourneyCost iDestA = {iDestA} iDestB = {iDestB}/>  
+                }                
+            </div> 
+            {/*    */}
+            {/* */}
+            {/* <TransitJourneyCost iDestA = {iDestA} iDestB = {iDestB}/>  
+            
             { 
                 transitPoints.length === 0 ? ""
                 :                                            
                 <TransitJourneyTime iDestA = {iDestA} iDestB = {iDestB} iTransit = {transitIndex}/>
+            }      */}
+              
+            { 
+                transitPoints.length === 0 ? <TransitJourneyCost iDestA = {iDestA} iDestB = {iDestB}/>
+                : 
+                <>
+                <TransitJourneyCost iDestA = {iDestA} iDestB = {iDestB}/>                                           
+                <TransitJourneyTime iDestA = {iDestA} iDestB = {iDestB} iTransit = {transitIndex}/>
+                </>
+                
             }     
         </>
     )

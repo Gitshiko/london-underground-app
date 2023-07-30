@@ -2,7 +2,7 @@ import './App.css';
 //import {data} from './assets/data/codeshack-output.js'
 import {data} from './assets/data/london-ug-data'
 import {useState} from 'react';
-import CheckRoutes from './assets/components/dRoute'
+import CheckRoutes from './assets/components/directRoute'
 
 //console.log(data[0].stations[1].Placemark.name)
 // console.log(data[0].stations[1].servingLines)
