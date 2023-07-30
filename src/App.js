@@ -24,7 +24,7 @@ function App() {
 
   // let states = useRef().current;
 
-  // Switching on and off the destination lists display
+  // Switching on and off the displaying of destination lists starts here
 
   //listA shown by onClick 'Select' in 'From'
   const [showLiA, setShowLiA] = useState(false);

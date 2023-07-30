@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from 'react';
-//import {data} from '../data/codeshack-output';
 import {data} from '../data/london-ug-data';
 import TRoutes from './transitRoutes';
 import DirectJourneyCost from './directCost';
@@ -18,6 +17,7 @@ function CheckRoutes(props){
     let bLines = [];
     let intersection = [];
           
+    // Get lines connected to destA and destB and get the intersection
     if (aIndex !== -1 && bIndex !== -1){
         //console.log(data[0].stations[aIndex].servingLines.servingLine.length);
         aLines = data[0].stations[aIndex].servingLines.servingLine;
@@ -38,31 +38,31 @@ function CheckRoutes(props){
 
     console.log(intersection);
 
+    // check if there is a direct route (an intersection of connected lines) 
     useEffect (()=>{        
         if(intersection.length > 0){
             setHasDirect(true);               
         } else {
             setHasDirect(false);
         }
-    }, [intersection.length]);
-    
+    }, [intersection.length]);    
 
     console.log(hasDirect);
+
+    // writing direct route into a list
 
     const list = intersection.map((item, index) => { 
         return (
             <>
             <div className="dRouteList">
+                {/* color is added by a className (which is equal to line name) */}
                 <div key={index} className= {item}>{index+ 1}. '{item}' line</div>
                 <FigureDirect line = {item}/>                
             </div>
             </>          
         )
-    })
-//color is added as a class (which is equal to its name) to line 
-    
-           
-
+    })  
+         
     return(
         <>
             <p className='drAvailability'>

@@ -20,6 +20,7 @@ function DirectJourneyTime(props){
     console.log('zoneA', zoneA);
     console.log('zoneB', zoneB); 
     
+    // time calculation logic
     useEffect(() => {                    
         if (zoneA !== zoneB) {
             let newTime = 4 + 3*(Math.abs(zoneB - zoneA));

@@ -9,6 +9,7 @@ function FigureTransit(props){
         <>
         <div className="figureTransit">
             <div id="destAFigure"></div>
+            {/* applying className to div based on line */}
             <div className= {
                 firstLine === 'Hammersmith & City' ? "pink"
                 :
@@ -36,6 +37,7 @@ function FigureTransit(props){
                 }                          
                   id="lineFigure"></div>
             <div id="destBFigure"></div>
+            {/* applying className to div based on line */}
             <div className= {
                 secondLine === 'Hammersmith & City' ? "pink"
                 :

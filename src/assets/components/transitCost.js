@@ -19,7 +19,8 @@ function TransitJourneyCost(props){
 
     console.log('zoneA', zoneA);
     console.log('zoneB', zoneB); 
-    
+
+    // cost calculation logic    
     useEffect(() => {                    
         if (zoneA < zoneB) {
             let newCost = 4.23 + 0.15*(zoneB - zoneA);

@@ -1,6 +1,4 @@
 //import { useEffect, useState, useRef } from 'react';
-//import { useState } from 'react';
-//import {data} from '../data/codeshack-output';
 import {data} from '../data/london-ug-data';
 import TransitJourneyCost from './transitCost';
 import FigureTransit from './transitFigure';
@@ -116,25 +114,15 @@ function TRoutes(props) {
                         <FigureTransit firstLine = {firstLeg[0]} secondLine = {secondLeg[0]}/>                       
                     </>
                 }                
-            </div> 
-            {/*    */}
-            {/* */}
-            {/* <TransitJourneyCost iDestA = {iDestA} iDestB = {iDestB}/>  
-            
-            { 
-                transitPoints.length === 0 ? ""
-                :                                            
-                <TransitJourneyTime iDestA = {iDestA} iDestB = {iDestB} iTransit = {transitIndex}/>
-            }      */}
-              
+            </div>                           
             { 
                 transitPoints.length === 0 ? <TransitJourneyCost iDestA = {iDestA} iDestB = {iDestB}/>
                 : 
                 <>
-                <TransitJourneyCost iDestA = {iDestA} iDestB = {iDestB}/>                                           
-                <TransitJourneyTime iDestA = {iDestA} iDestB = {iDestB} iTransit = {transitIndex}/>
+                    <TransitJourneyCost iDestA = {iDestA} iDestB = {iDestB}/>                                           
+                    <TransitJourneyTime iDestA = {iDestA} iDestB = {iDestB} iTransit = {transitIndex}/>
                 </>
-                
+                    
             }     
         </>
     )

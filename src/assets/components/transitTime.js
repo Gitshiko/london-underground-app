@@ -24,7 +24,8 @@ function TransitJourneyTime(props){
     console.log('zoneA', zoneA);
     console.log('zoneB', zoneB); 
     console.log('zoneT', zoneT); 
-    
+
+    // time calculation for first leg    
     useEffect(() => {                    
         if (zoneA !== zoneT) {
             let newTime = 4 + 3*(Math.abs(zoneT - zoneA));
@@ -32,6 +33,8 @@ function TransitJourneyTime(props){
         }    
     }, [zoneA, zoneT]);
 
+
+    // time calculation for last leg 
     useEffect(() => {                    
         if (zoneB !== zoneT) {
             let newTime = 4 + 3*(Math.abs(zoneT - zoneB));

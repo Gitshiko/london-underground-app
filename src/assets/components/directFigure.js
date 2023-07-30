@@ -7,6 +7,7 @@ function FigureDirect(props){
         <>
         <div className="figure">
             <div id="destAFigure"></div>
+            {/* Applying className based on line to the div */}
             <div className= {
                 line === 'Hammersmith & City' ? "pink"
                 :
