@@ -47,7 +47,7 @@ function TransitJourneyTime(props){
     return(
         <>
         <p className = 'time'>
-            Total journey time is {timeLeg1 + timeLeg2} minutes.
+            Time: {timeLeg1 + timeLeg2} minutes
         </p>                  
         </>
     )

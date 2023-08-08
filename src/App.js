@@ -1,5 +1,4 @@
 import './App.css';
-//import {data} from './assets/data/codeshack-output.js'
 import {data} from './assets/data/london-ug-data'
 import {useState} from 'react';
 import CheckRoutes from './assets/components/directRoute'
@@ -122,9 +121,9 @@ function App() {
   console.log(destBIndex);
 
   return (
-    <div className="App-container">
+    <div className="app-container">
 
-      <div className="App-header">
+      <div className="app-header">
         <div className="icon"><img src="images/lug.jpg" alt="London Underground Logo" /></div>
         <h1>London Underground Navigator</h1>             
       </div>

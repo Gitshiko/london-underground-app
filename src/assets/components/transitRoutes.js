@@ -109,7 +109,8 @@ function TRoutes(props) {
                     :
                     <>
                         <div className='transit-list'>             
-                            <div className= 'list'><span className = {firstLeg[0]}><b>'{firstLeg[0]}' line  --></b></span> Transit via <b>'{transitPoints[0]}'</b><span className={secondLeg[0]}><b>--> '{secondLeg[0]}' line </b></span></div>
+                            {/* <div className= 'list'><span className = {firstLeg[0]}><b>'{firstLeg[0]}' line  --></b><br></br></span> Transit via: <b>{transitPoints[0]}</b><br /><span className={secondLeg[0]}><b>--> '{secondLeg[0]}' line </b></span></div> */}
+                            <div className= 'list'><span className = {firstLeg[0]}>'{firstLeg[0]}' line --> <br /></span> {transitPoints[0]} <br /><span className={secondLeg[0]}>--> '{secondLeg[0]}' line </span></div>
                         </div> 
                         <FigureTransit firstLine = {firstLeg[0]} secondLine = {secondLeg[0]}/>                       
                     </>

@@ -33,7 +33,7 @@ function DirectJourneyTime(props){
     return(
         <>
             <p className='time'>
-                Total journey time is {time} minutes.
+                Time: {time} minutes
             </p>                 
         </>
     )

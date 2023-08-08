@@ -64,14 +64,14 @@ function CheckRoutes(props){
     })  
          
     return(
-        <>
+        <div>
             <p className='drAvailability'>
-                { hasDirect === true ? 'You have following options of direct routes.'
+                { hasDirect === true ? 'Available direct routes:'
                 :
-                'Direct routes are not available for your journey.'
+                'No direct routes!'
                 }
             </p>
-            <p style={{fontSize: '20px', padding: '0.5rem'}}>
+            <p style={{fontSize: '17px'}}>
                 { hasDirect === true ? list
                 :                
                 'Please use the following transit route.'
@@ -90,7 +90,7 @@ function CheckRoutes(props){
                 }
             </p>
             
-        </>
+        </ div>
     )
 
 }

@@ -38,7 +38,7 @@ function TransitJourneyCost(props){
     return(
         <>
             <p className = 'cost'>
-                Total cost of the journey is £{cost}
+                Cost: £{cost}
             </p>                 
         </>
     )
